@@ -6,12 +6,12 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloController {
-	@RequestMapping("/login")
-	protected ModelAndView login() {
+	@RequestMapping("/")
+	protected String login() {
 		ModelAndView obj = new ModelAndView("HelloPage");
 		obj.addObject("msg", "hi User'Welcome to our page");
 
-		return obj;
+		return "HelloPage";
 	}
 
 }
